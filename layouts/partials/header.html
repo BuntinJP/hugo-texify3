@@ -2,6 +2,7 @@
 {{ $domain := $parsedUrl.Host }}
 {{ $domainWithoutWWW := replace $domain "www." "" }}
 <header id="header">
+  <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" >
   <h1>
     <a href="{{ .Site.BaseURL }}">{{ .Site.Params.title | default .Site.Title }}</a>
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle theme">
