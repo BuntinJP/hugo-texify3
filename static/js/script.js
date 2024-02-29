@@ -1,10 +1,10 @@
 // Add copy button to <pre> blocks
-document.addEventListener("DOMContentLoaded", function () {
-  const preBlocks = document.querySelectorAll("pre");
+document.addEventListener('DOMContentLoaded', function () {
+  const preBlocks = document.querySelectorAll('pre');
 
   preBlocks.forEach(function (block) {
-    const copyButton = document.createElement("button");
-    copyButton.classList.add("copy-button");
+    const copyButton = document.createElement('button');
+    copyButton.classList.add('copy-button');
 
     // copy and check SVG icons
     const svgCopy =
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     copyButton.innerHTML = svgCopy;
 
-    copyButton.addEventListener("click", function () {
+    copyButton.addEventListener('click', function () {
       const textToCopy = block.innerText;
 
       copyButton.innerHTML = svgCopied;
@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
       navigator.clipboard
         .writeText(textToCopy)
         .then(() => {
-          console.log("Text copied to clipboard: " + textToCopy);
+          console.log('Text copied to clipboard: ' + textToCopy);
           setTimeout(() => {
             copyButton.innerHTML = svgCopy;
           }, 2000);
         })
         .catch((err) => {
-          console.error("Unable to copy text to clipboard", err);
+          console.error('Unable to copy text to clipboard', err);
           copyButton.innerHTML = svgCopy;
           setTimeout(() => {
             copyButton.innerHTML = svgCopy;
@@ -43,28 +43,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Dark mode toggle
-let darkMode = localStorage.getItem("darkMode");
-const darkModeToggle = document.querySelectorAll("#dark-mode-toggle");
+
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelectorAll('#dark-mode-toggle');
 
 const enableDarkMode = () => {
-  document.body.classList.add("darkmode");
-  localStorage.setItem("darkMode", "enabled");
+  document.body.classList.add('darkmode');
+  localStorage.setItem('darkMode', 'enabled');
 };
 
 const disableDarkMode = () => {
-  document.body.classList.remove("darkmode");
-  localStorage.setItem("darkMode", null);
+  document.body.classList.remove('darkmode');
+  localStorage.setItem('darkMode', null);
 };
 
-if (darkMode === "enabled") {
+if (darkMode === 'enabled') {
   enableDarkMode();
 }
 
 darkModeToggle.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode");
-    if (darkMode !== "enabled") {
-      enableDarkMode();
+  toggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode');
+    //if (darkMode !== 'enabled') {
+    if (true) {
+    enableDarkMode();
     } else {
       disableDarkMode();
     }
@@ -72,9 +74,9 @@ darkModeToggle.forEach((toggle) => {
 });
 
 // Scroll to top button
-var backToTopBtn = document.getElementById("back-to-top");
+var backToTopBtn = document.getElementById('back-to-top');
 
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
