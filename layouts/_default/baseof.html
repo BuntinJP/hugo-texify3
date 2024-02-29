@@ -52,19 +52,14 @@
 
   <!-- style -->
   {{ $options := dict "transpiler" "dartsass" "targetPath" "css/common.css" }}
-  {{ with resources.Get "sass/layouts/common.scss" | toCSS $options | postCSS
-  | minify | fingerprint }}
+  {{ with resources.Get "sass/layouts/common.scss" | toCSS $options | postCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
-  {{ end }} {{ $options := dict "transpiler" "dartsass" "targetPath"
-  "css/content.css" }} {{ with resources.Get "sass/layouts/content.scss" |
+  {{ end }}
+  {{ $options := dict "transpiler" "dartsass" "targetPath" "css/content.css" }} {{ with resources.Get
+  "sass/layouts/content.scss" |
   toCSS $options | postCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
   {{ end }}
-
-  <!-- font-awesome -->
-  {{/*
-  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
-  */}}
 
   <!-- title -->
   {{ if .IsHome }}
@@ -80,8 +75,10 @@
 
 <body>
   <div id="wrapper">
-    {{ partial "header.html" . }} {{ block "main" . }}{{ end }} {{ partial
-    "footer.html" . }}
+    {{ partial "header.html" . }}
+    {{ block "main" . }}
+    {{ end }}
+    {{ partial "footer.html" . }}
   </div>
 
   <!-- javascript -->
@@ -95,9 +92,11 @@
   <!-- custom js -->
   {{ range .Site.Params.customJS }}
   <script src="{{ . | absURL }}"></script>
-  {{ end }} {{/*
+  {{ end }}
+  {{/*
   <!-- google analytics -->
-  {{ template "_internal/google_analytics.html" . }} */}}
+  {{ template "_internal/google_analytics.html" . }}
+  */}}
 </body>
 
 </html>

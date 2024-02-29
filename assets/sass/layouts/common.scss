@@ -1,7 +1,7 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../vars";
-@import "../fonts";
+@import '../vars';
+@import '../fonts';
 
 // global
 * {
@@ -51,7 +51,7 @@ hr {
   background-color: var(--bg);
   display: flex;
   flex-direction: column;
-  font-family: "Latin Modern Roman", "Times New Roman", serif;
+  font-family: 'Latin Modern Roman', 'Times New Roman', serif;
   min-height: 100vh;
   overflow-wrap: break-word;
   padding: 1rem $padding;
@@ -116,7 +116,7 @@ hr {
 
       &:after {
         background-color: var(--fg1);
-        content: "";
+        content: '';
         position: absolute;
         width: 100%;
         transform: scaleX(0);

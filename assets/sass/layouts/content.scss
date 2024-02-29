@@ -1,7 +1,7 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../vars";
-@import "../syntax";
+@import '../vars';
+@import '../syntax';
 
 .content {
   .MathJax {
@@ -31,10 +31,10 @@
       text-decoration: none;
 
       &::before {
-        content: "[";
+        content: '[';
       }
       &::after {
-        content: "]";
+        content: ']';
       }
     }
   }
@@ -54,7 +54,7 @@
   pre {
     background-color: var(--bg_s) !important;
     border-radius: $radius;
-    font-family: "Latin Modern Mono", Courier, monospace;
+    font-family: 'Latin Modern Mono', Courier, monospace;
     position: relative;
     overflow-x: auto;
     padding: 1rem;
@@ -67,7 +67,7 @@
   code {
     background-color: var(--bg_s);
     border-radius: $radius;
-    font-family: "Latin Modern Mono", Courier, monospace;
+    font-family: 'Latin Modern Mono', Courier, monospace;
     padding: 0 0.2rem;
   }
 
@@ -215,37 +215,37 @@ button.copy-button {
     counter-reset: section-h3;
     &:before {
       counter-increment: section-h2;
-      content: counter(section-h2) " ";
+      content: counter(section-h2) ' ';
     }
   }
   h3 {
     counter-reset: section-h4;
     &:before {
       counter-increment: section-h3;
-      content: counter(section-h2) "." counter(section-h3) " ";
+      content: counter(section-h2) '.' counter(section-h3) ' ';
     }
   }
   h4 {
     counter-reset: section-h5;
     &:before {
       counter-increment: section-h4;
-      content: counter(section-h2) "." counter(section-h3) "."
-        counter(section-h4) " ";
+      content: counter(section-h2) '.' counter(section-h3) '.'
+        counter(section-h4) ' ';
     }
   }
   h5 {
     counter-reset: section-h6;
     &:before {
       counter-increment: section-h5;
-      content: counter(section-h2) "." counter(section-h3) "."
-        counter(section-h4) "." counter(section-h5) " ";
+      content: counter(section-h2) '.' counter(section-h3) '.'
+        counter(section-h4) '.' counter(section-h5) ' ';
     }
   }
   h6 {
     &:before {
       counter-increment: section-h6;
-      content: counter(section-h2) "." counter(section-h3) "."
-        counter(section-h4) "." counter(section-h5) "." counter(section-h6) " ";
+      content: counter(section-h2) '.' counter(section-h3) '.'
+        counter(section-h4) '.' counter(section-h5) '.' counter(section-h6) ' ';
     }
   }
 }
@@ -255,32 +255,32 @@ button.copy-button {
     counter-reset: ul-h3;
     &:before {
       counter-increment: ul-h2;
-      content: counter(ul-h2) " ";
+      content: counter(ul-h2) ' ';
     }
     li {
       counter-reset: ul-h4;
       &:before {
         counter-increment: ul-h3;
-        content: counter(ul-h2) "." counter(ul-h3) " ";
+        content: counter(ul-h2) '.' counter(ul-h3) ' ';
       }
       li {
         counter-reset: ul-h5;
         &:before {
           counter-increment: ul-h4;
-          content: counter(ul-h2) "." counter(ul-h3) "." counter(ul-h4) " ";
+          content: counter(ul-h2) '.' counter(ul-h3) '.' counter(ul-h4) ' ';
         }
         li {
           counter-reset: ul-h6;
           &:before {
             counter-increment: ul-h5;
-            content: counter(ul-h2) "." counter(ul-h3) "." counter(ul-h4) "."
-              counter(ul-h5) " ";
+            content: counter(ul-h2) '.' counter(ul-h3) '.' counter(ul-h4) '.'
+              counter(ul-h5) ' ';
           }
           li {
             &:before {
               counter-increment: ul-h6;
-              content: counter(ul-h2) "." counter(ul-h3) "." counter(ul-h4) "."
-                counter(ul-h5) "." counter(ul-h6) " ";
+              content: counter(ul-h2) '.' counter(ul-h3) '.' counter(ul-h4) '.'
+                counter(ul-h5) '.' counter(ul-h6) ' ';
             }
           }
         }
