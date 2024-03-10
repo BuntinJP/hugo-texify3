@@ -4,7 +4,7 @@ footnote = """
 Powered by  <a class=link href=https://gohugo.io target=_blank rel=noopener>Hugo</a> | 
 Theme <a class=link href=https://github.com/michaelneuper/hugo-texify3 target=_blank rel=noopener>TeXify3</a>
 """
-keywords = ["hugo", "latex", "theme", "blog", "texify", "texify2", "texify3", "michael", "neuper"]
+keywords = []
 customCSS = []
 customJS = []
 dateFormat = "2 January 2006"
@@ -12,10 +12,10 @@ emphasisWithDots = true
 since = "2023"
 toc = true
 showWordCount = true
-showReadingTime = true
+showReadingTime = false
 rootFontSize = "100%"
 math = true
-enableDuckDuckGoSearchBox = true
+enableDuckDuckGoSearchBox = false
 numberedSubtitles = true
 enableInlineShortcodes = true
 
