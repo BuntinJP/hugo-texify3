@@ -1,0 +1,15 @@
+<link href="https://cdn.jsdelivr.net/npm/artalk@2.8.2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2.8.2/dist/Artalk.js"></script>
+
+<!-- Artalk -->
+<div id="Comments"></div>
+
+<script>
+  Artalk.init({
+    el: '#Comments',
+    pageKey: '{{ .Permalink }}',
+    pageTitle: '{{ .Title }}',
+    server: '{{ $.Site.Params.artalk.server }}',
+    site: '{{ $.Site.Params.artalk.site }}',
+  })
+</script>

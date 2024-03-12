@@ -100,10 +100,13 @@
     {{ end }}
   </div>
   <div class="comment">
-    <!-- disqus -->
+    {{/* <!-- disqus -->
     {{ template "_internal/disqus.html" . }}
     <!-- generic engine -->
-    {{ .Site.Params.commentEngine.code | safeHTML }}
+    {{ .Site.Params.commentEngine.code | safeHTML }} */}}
+    <div class="article-comments">
+      {{- partial "comment/artalk" . -}}
+    </div>
   </div>
   {{ end }}
   {{ if .Page.Store.Get "hasMermaid" }}
